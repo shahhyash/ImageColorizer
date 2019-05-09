@@ -11,6 +11,7 @@ from PIL import Image
 
 TRAINING_INPUT_DIR=join("training_data", "bw")
 TRAINING_OUTPUT_DIR=join("training_data", "color")
+TEST_IMAGES_DIR="test_images"
 WEIGHTS_DIR="weights"
 
 #  Given a value x, it fetches the sigmoid value at that point
@@ -156,8 +157,8 @@ if __name__ == '__main__':
     
     # Write the entire name of the file you'd like to test with available in the test_images directory
     # The test_images directory does not have any pictures that were explicitly trained with in the model
-    test_image = 'art294.jpg'
-    test_image = cv2.imread(join(TRAINING_INPUT_DIR, test_image), 0)
+    test_image = 'land604.jpg'
+    test_image = cv2.imread(join(TEST_IMAGES_DIR, test_image), 0)
     
     # Uncomment the line below if you'd like to retrain the network
     # l1w, l2w, l3w = trainNetwork()
